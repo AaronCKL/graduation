@@ -48,3 +48,6 @@ include("head.php");
 </div>
 </body>
 </html>
+<?PHP
+include("../common/footer.html");
+?>

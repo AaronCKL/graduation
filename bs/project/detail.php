@@ -80,6 +80,10 @@ include("head.php");
     </div>
 </div>
 </div>
+
 </div>
+<?PHP
+include("../common/footer.html");
+?>
 </body>
 </html>
