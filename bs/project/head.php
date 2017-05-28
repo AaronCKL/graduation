@@ -50,5 +50,64 @@ Session_Start();
 	</div>
 </div>
 </div>
+<div class="modal fade md-modal" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">账号登录</h4>
+      </div>
+      <div class="modal-body">
+        <form id="login-form" method="POST" action="/bs/user/login.php">
+          <div class="form-group">
+            <input name="loginMobile" type="text" class="form-control mobile" id="loginMobile" placeholder="您的手机号码">
+          </div>
+          <div class="form-group">
+            <input name="loginPassword" type="password" class="form-control password" id="loginPassword" placeholder="6-15位密码">
+          </div>
+          <!-- <div class="form-group">
+              <label for="auto-login" class="wt-checkbox-wrapper">
+              <input type="checkbox" id="auto-login" name="auto-login" value="" checked>
+              <label for="auto-login" class="wt-checkbox"></label>自动登录
+              </label>
+          </div> -->
+          <div class="form-group">
+            <input type="submit" class="submit form-control btn btn-primary" value="登录">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="modal fade md-modal" id="register-modal" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">帐号注册</h4>
+      </div>
+      <div class="modal-body">
+        <form method="POST" action="/bs/user/register.php" id="register-form">
+          <div class="form-group">
+            <input name="mobile" type="text" class="form-control mobile" id="mobile" placeholder="您的手机号码">
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control password" id="password" name="password" placeholder="6-15位密码">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control username" id="name" name="name" placeholder="3-16位昵称">
+          </div>
+          <div class="form-group">
+            <input type="submit" class="submit form-control btn btn-primary" value="确认注册">
+          </div>
+          <div class="form-group">
+            <span>已有注册账号?</span>
+            <a href="" data-toggle="modal" data-target="#login-modal">请登录</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>
