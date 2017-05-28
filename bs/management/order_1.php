@@ -55,14 +55,11 @@
                                                         <th>操作</th>
                                                     </tr>
 													<?php    
-													$con = mysql_connect('localhost','root','');
-													if (!$con)
-													{
-														die('Could not connect: ' . mysql_error());
-													}
-													mysql_query("set names 'utf8'");
-													mysql_select_db("financing", $con);
-													$chec = mysql_query("select * from project where visibile = 0 "); 
+													require("../config/mysql.php");
+        $con = mysql_connect($mysql_host,$mysql_user,$mysql_pass) or die('Could not connect: ' . mysql_error());;
+   mysql_query("set names ".$mysql_db_language);
+   mysql_select_db($mysql_dbname, $con);
+													$chec = mysql_query("select * from project where visible = 0 "); 
 													while($re = mysql_fetch_array($chec))
 													{  
 													echo '<tr align="center" class="d">

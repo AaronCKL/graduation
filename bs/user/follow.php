@@ -16,13 +16,10 @@ include("head.php");
       <ul class="list-unstyled">
       <?php    
       $name=$_SESSION['name'];
-      $con = mysql_connect('localhost','root','');
-   if (!$con)
-     {
-  die('Could not connect: ' . mysql_error());
-     }
-   mysql_query("set names 'utf8'");
-   mysql_select_db("financing", $con);
+      require("../config/mysql.php");
+        $con = mysql_connect($mysql_host,$mysql_user,$mysql_pass) or die('Could not connect: ' . mysql_error());;
+   mysql_query("set names ".$mysql_db_language);
+   mysql_select_db($mysql_dbname, $con);
     $chec = mysql_query("select * from follow where follower= '$name' "); 
    $cc=1;  
    while($re = mysql_fetch_array($chec))
@@ -48,13 +45,10 @@ include("head.php");
       </div>
       <ul class="list-unstyled">
        <?php    
-  $con = mysql_connect('localhost','root','');
-   if (!$con)
-     {
-  die('Could not connect: ' . mysql_error());
-     }
-   mysql_query("set names 'utf8'");
-    mysql_select_db("financing", $con);
+  require("../config/mysql.php");
+        $con = mysql_connect($mysql_host,$mysql_user,$mysql_pass) or die('Could not connect: ' . mysql_error());;
+   mysql_query("set names ".$mysql_db_language);
+   mysql_select_db($mysql_dbname, $con);
     $name=$_SESSION['name'];
   $chec = mysql_query("select * from user where name!= '$name' "); 
   $bb=100;

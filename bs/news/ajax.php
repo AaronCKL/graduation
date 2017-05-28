@@ -1,7 +1,7 @@
 <?php
 	  Session_Start();
       $comment = $_GET['neirong'];
-      $projectId = $_GET["ID"];
+      $newsId = $_GET["ID"];
       require("../config/mysql.php");
         $con = mysql_connect($mysql_host,$mysql_user,$mysql_pass) or die('Could not connect: ' . mysql_error());;
    mysql_query("set names ".$mysql_db_language);
@@ -9,7 +9,7 @@
        date_default_timezone_set("Asia/Shanghai");
 	   $t_time = date('Y-m-d H:i:sa');
 	   $name = $_SESSION['name'];
-		mysql_query("INSERT INTO commentpj (pjId, name, comment, time) VALUES ($projectId,'$name','$comment','$t_time')")or die(mysql_error());
+		mysql_query("INSERT INTO commentnews (newsId, name, comment, time) VALUES ($newsId,'$name','$comment','$t_time')")or die(mysql_error());
 		echo'<div class="project-comment-list">
        <div class="member-img">
           <img src="/bs/common/img/user.png">

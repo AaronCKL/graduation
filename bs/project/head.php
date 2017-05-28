@@ -22,7 +22,7 @@ Session_Start();
 		<ul class="ib-nav">
 		   <li class=""><a href="/bs/index.php">首页</a></li>
 		   <li class="active"><a href="/bs/project/index.php" >项目汇集</a></li>
-		   <li class=""><a>财经要闻</a></li>
+		   <li class=""><a href="/bs/news/index.php">财经要闻</a></li>
 		   <li class="dropdown">
 		   <a href="#" class="dropdown-toggle" data-toggle="dropdown">
 		   我的
@@ -102,7 +102,7 @@ Session_Start();
           </div>
           <div class="form-group">
             <span>已有注册账号?</span>
-            <a href="" data-toggle="modal" data-target="#login-modal">请登录</a>
+            <a href="" data-toggle="modal" data-dismiss="modal" data-target="#login-modal">请登录</a>
           </div>
         </form>
       </div>

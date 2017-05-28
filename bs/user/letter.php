@@ -15,13 +15,10 @@ include("head.php");
    </ul>
    <div class="letter-list fade in active" id="identifier">
        <?php
-      $con = mysql_connect('localhost','root','');
-      if (!$con)
-      {
-      die('Could not connect: ' . mysql_error());
-      }
-      mysql_query("set names 'utf8'");
-      mysql_select_db("financing", $con);
+     require("../config/mysql.php");
+        $con = mysql_connect($mysql_host,$mysql_user,$mysql_pass) or die('Could not connect: ' . mysql_error());;
+   mysql_query("set names ".$mysql_db_language);
+   mysql_select_db($mysql_dbname, $con);
      $name=$_SESSION['name'];
      $result = mysql_query("select * from message where toName = '$name' ")or die(mysql_error());;
          while($row = mysql_fetch_array($result))
@@ -39,13 +36,10 @@ include("head.php");
    </div>
    <div class="letter-list fade" id="identi">
    <?php
-      $con = mysql_connect('localhost','root','');
-      if (!$con)
-      {
-      die('Could not connect: ' . mysql_error());
-      }
-      mysql_query("set names 'utf8'");
-      mysql_select_db("financing", $con);
+     require("../config/mysql.php");
+        $con = mysql_connect($mysql_host,$mysql_user,$mysql_pass) or die('Could not connect: ' . mysql_error());;
+   mysql_query("set names ".$mysql_db_language);
+   mysql_select_db($mysql_dbname, $con);
      $name=$_SESSION['name'];
      $result = mysql_query("select * from message where fromName = '$name' ")or die(mysql_error());;
          while($row = mysql_fetch_array($result))

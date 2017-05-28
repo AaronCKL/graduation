@@ -10,12 +10,12 @@ include("head.php");
 <div class="wrapper">
 <div class="project">
 <?php    
-      $aa = $_GET['projectId'];
+      $aa = $_GET['newsId'];
       require("../config/mysql.php");
         $con = mysql_connect($mysql_host,$mysql_user,$mysql_pass) or die('Could not connect: ' . mysql_error());;
    mysql_query("set names ".$mysql_db_language);
    mysql_select_db($mysql_dbname, $con);
-      $chec = mysql_query("select * from project where ID = $aa"); 
+      $chec = mysql_query("select * from news where ID = $aa"); 
       while($re = mysql_fetch_array($chec))
       {  
      echo '<div class="project-news-list">
@@ -29,14 +29,15 @@ include("head.php");
 <div class="project-comment-wrapper">
    <div class="project-comment">
    <textarea class="form-control" rows="4" id="comment"></textarea>
-   <button class="btn btn-danger" type="button"
-    <?php 
+   <button class="btn btn-danger" type="button" 
+   <?php 
    if(!empty($_SESSION['name']))
    {
     echo 'onclick="comment('.$aa.')"'; 
    }else{
     echo 'data-toggle="modal" data-target="#login-modal"';
    }
+
     ?>>评论</button>
    </div>
    <div class="project-comment-wp" id="projectComment">
@@ -45,7 +46,7 @@ include("head.php");
         $con = mysql_connect($mysql_host,$mysql_user,$mysql_pass) or die('Could not connect: ' . mysql_error());;
    mysql_query("set names ".$mysql_db_language);
    mysql_select_db($mysql_dbname, $con);
-      $chec = mysql_query("select * from commentpj where pjId = $aa"); 
+      $chec = mysql_query("select * from commentnews where newsId = $aa"); 
       while($re = mysql_fetch_array($chec))
       {  
       echo '<div class="project-comment-list">

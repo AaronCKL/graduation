@@ -3,14 +3,10 @@ Session_start();
 header("Content-Type: text/html;charset=utf-8");
 $loginMobile = $_POST['loginMobile'];  
 $loginPassword = $_POST['loginPassword'];  
-   $con = mysql_connect('localhost','root','');
-   if (!$con)
-     {
-  die('Could not connect: ' . mysql_error());
-     }
-   mysql_query("set names 'utf8'");
-   mysql_select_db("financing", $con);
-
+   require("../config/mysql.php");
+        $con = mysql_connect($mysql_host,$mysql_user,$mysql_pass) or die('Could not connect: ' . mysql_error());;
+   mysql_query("set names ".$mysql_db_language);
+   mysql_select_db($mysql_dbname, $con);
   $check_query = mysql_query("select * from user where mobile='$loginMobile' and password='$loginPassword' limit 1");  
    if($result = mysql_fetch_array($check_query))
    { 

@@ -44,13 +44,13 @@
                                 <table width="100%">
                                     <tr>
                                         <td colspan="2">
-                                            <form action="" method="">
+                                            <form method="post"  action="news_check.php" enctype="multipart/form-data">
                                                 <table width="100%" class="cont">
                                                     <tr>
                                                         <td width="2%">&nbsp;</td>
-                                                        <td>资讯名称：</td>
-                                                        <td width="20%"><input class="text" type="text" name="cat_name" value="" /></td>
-                                                        <td></td>
+                                                        <td width="10%">资讯名称：</td>
+                                                        <td width="20%"><input class="text" type="text" name="title" value="" /></td>
+                                                        <td width="66"></td>
                                                         <td width="2%">&nbsp;</td>
                                                     </tr>
 													<tr>
@@ -63,17 +63,17 @@
                                                     </tr>
                                                     <tr>
                                                         <td>&nbsp;</td>
-                                                        <td>是否隐藏：</td>
+                                                        <td>简介图片：</td>
                                                         <td>
-                                                            <input type="radio" name="is_hidden" value="1" /> 是 
-                                                            <input type="radio" name="is_hidden" value="0" /> 否
+														   <input id="content" name="content" type="hidden"/>
+                                                           <input type="file" id="inputfile" name="inputfile">
                                                         </td>
-                                                        <td>设置该栏目是否隐藏。用户仍可通过URL访问到此栏目</td>
+                                                        <td></td>
                                                         <td>&nbsp;</td>
                                                     </tr>
                                                     <tr>
                                                         <td>&nbsp;</td>
-                                                        <td colspan="3"><input class="btn" type="submit" value="提交" /></td>
+                                                        <td colspan="3"><input class="btn" type="submit" value="提交" onclick="saveContent()"/></td>
                                                         <td>&nbsp;</td>
                                                     </tr>
                                                 </table>
@@ -115,12 +115,9 @@
     <!--引入 wangEditor.js-->
     <script type="text/javascript" src='js/wangEditor-1.1.0-min.js'></script>
     <script type="text/javascript">
-        $(function(){
-            $('#spanTime').text((new Date()).toString());
-
-            //一句话，即可把一个div 变为一个富文本框！o(∩_∩)o 
             var $editor = $('#txtDiv').wangEditor();
-
-        });
+        function saveContent(){
+               document.getElementById("content").value = $editor.html();
+            }
     </script>
 </html>

@@ -1,13 +1,10 @@
 <?php
 $userId=$_GET["uid"];
 $oldValue=$_GET["oid"];
-   $con = mysql_connect('localhost','root','');
-      if (!$con)
-      {
-      die('Could not connect: ' . mysql_error());
-      }
-     mysql_query("set names 'utf8'");
-     mysql_select_db("financing", $con);
+   require("../config/mysql.php");
+        $con = mysql_connect($mysql_host,$mysql_user,$mysql_pass) or die('Could not connect: ' . mysql_error());;
+  mysql_query("set names ".$mysql_db_language);
+   mysql_select_db($mysql_dbname, $con);
     $result = mysql_query("select * from follow where follower = '$userId' and name = '$oldValue'");
     if ($row = mysql_fetch_array($result)){
       echo "未关注";

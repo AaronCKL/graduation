@@ -1,10 +1,11 @@
-<?php 
+﻿<?php 
 require("../config/mysql.php");
         $db = mysql_connect($mysql_host,$mysql_user,$mysql_pass) or die('Could not connect: ' . mysql_error());;
    mysql_query("set names ".$mysql_db_language);
    mysql_select_db($mysql_dbname, $db);
 //上传文件的路径
-$dir = substr(dirname(__FILE__), 0, -4)."img\project";
+$dir = substr(dirname(__FILE__), 0, -10)."img/news";
+echo $dir;
 /*
 $_FILES:用在当需要上传二进制文件的地方,获得该文件的相关信息
 $_FILES['userfile']['name'] 客户端机器文件的原名称。 
@@ -43,7 +44,6 @@ if($_FILES['inputfile']['error'] != UPLOAD_ERR_OK)
 
 $title = $_POST['title'];
 $content = $_POST['content'];
-$mobile = $_POST['mobile'];
 $time = date('Y-m-d');
 /*getimagesize方法返回一个数组，
 $width : 索引 0 包含图像宽度的像素值，
@@ -76,12 +76,12 @@ switch($type)
         die('The file you uploaded was not a supported filetype.');
 }
 
-$query = "insert into project(title,content,mobile,time) values ('".$title."','".$content."','".$mobile."','".$time."')";
+$query = "insert into news(title,content,time) values ('".$title."','".$content."','".$time."')";
 mysql_query($query , $db) or die(mysql_error($db));
 $last_id = mysql_insert_id();
 //用写入的id作为图片的名字，避免同名的文件存放在同一目录中
 $imagename = $last_id.$ext;
-$query = 'update project set imgPath="'.$imagename.'" where ID='.$last_id;
+$query = 'update news set imgPath="'.$imagename.'" where ID='.$last_id;
 mysql_query($query , $db) or die(mysql_error($db));
 //有url指定的图片创建图片并保存到指定目录
 switch($type)
@@ -99,5 +99,5 @@ switch($type)
 //销毁由url生成的图片
 imagedestroy($image);
  mysql_close($db);
- header('Location:finance.php');
+ header('Location:news_add.html');
 ?>

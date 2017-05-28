@@ -48,13 +48,10 @@
                                                 <table width="100%" class="cont">
 												<?php    
 													$aa = $_GET['projectId'];
-													$con = mysql_connect('localhost','root','');
-													if (!$con)
-													{
-														die('Could not connect: ' . mysql_error());
-													}
-													mysql_query("set names 'utf8'");
-													mysql_select_db("financing", $con);
+													require("../config/mysql.php");
+        $con = mysql_connect($mysql_host,$mysql_user,$mysql_pass) or die('Could not connect: ' . mysql_error());;
+  mysql_query("set names ".$mysql_db_language);
+   mysql_select_db($mysql_dbname, $con);
 													$chec = mysql_query("select * from project where ID = $aa"); 
 													while($re = mysql_fetch_array($chec))
 													{  

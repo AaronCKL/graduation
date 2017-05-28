@@ -1,8 +1,5 @@
 <?PHP
 Session_Start();
-if(!$_SESSION['name']){
-	header('Location:../index.php');
-}
 ?>
 <!doctype html>
 <html>
@@ -12,9 +9,8 @@ if(!$_SESSION['name']){
 <link rel="stylesheet" href="/bs/common/css/common.css">
 <link rel="stylesheet" href="/bs/common/css/test.css">
 <link rel="stylesheet" href="/bs/common/css/login.css">
-<link rel="stylesheet" href="/bs/user/css/user.css">
+<link rel="stylesheet" href="/bs/project/css/project.css">
 <script type="text/javascript" src="/bs/common/js/jquery-1.11.2.min.js"></script>
-<script type="text/javascript" src="/bs/common/js/Tony_Tab.js"></script>
 <script type="text/javascript" src="/bs/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
@@ -25,18 +21,18 @@ if(!$_SESSION['name']){
 		<ul class="ib-nav">
 		   <li class=""><a href="/bs/index.php">首页</a></li>
 		   <li class=""><a href="/bs/project/index.php" >项目汇集</a></li>
-		   <li class=""><a href="/bs/news/index.php">财经要闻</a></li>
-		   <li class="dropdown active">
+		   <li class="active"><a href="/bs/news/index.php">财经要闻</a></li>
+		   <li class="dropdown">
 		   <a href="#" class="dropdown-toggle" data-toggle="dropdown">
 		   我的
 		   <b class="caret"></b>
 		   </a>
 		   <ul class="dropdown-menu" style="min-width: 100px;">
-                    <li class="text-center"><a href="follow.php">我的关注</a></li>
-                    <li class="text-center"><a href="fans.php">我的粉丝</a></li>
-                    <li class="text-center"><a href="letter.php">我的私信</a></li>
-                    <li class="text-center"><a href="finance.php">我要融资</a></li>
-                    <li class="text-center"><a href="loginOut.php">退出登陆</a></li>
+                    <li class="text-center"><a href="/bs/user/follow.php">我的关注</a></li>
+                    <li class="text-center"><a href="/bs/user/fans.php">我的粉丝</a></li>
+                    <li class="text-center"><a href="/bs/user/letter.php">我的私信</a></li>
+                    <li class="text-center"><a href="/bs/user/finance.php">我要融资</a></li>
+                    <li class="text-center"><a href="/bs/user/loginOut.php">退出登陆</a></li>
                 </ul>
 		   </li>
 		</ul>
