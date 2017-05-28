@@ -18,7 +18,7 @@ Session_Start();
 <div class="wrapper">
 <div class="header ib-header">
 	<div class="ib-header--inner">
-		<a class="header-logo" href="">logo</a>
+		<a class="header-logo" href=""><img src="/bs/common/img/9.png" width="120px" height="60px"></a>
 		<ul class="ib-nav">
 		   <li class=""><a href="/bs/index.php">首页</a></li>
 		   <li class="active"><a href="/bs/project/index.php" >项目汇集</a></li>

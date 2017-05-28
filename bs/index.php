@@ -302,6 +302,10 @@ include("common/head.php");
     </div>
   </div>
 </div>
+<?PHP
+include("common/footer.html");
+?>
+
 <script type="text/javascript">
 winWidth = document.body.clientWidth;
 $('#focus').css("width",winWidth);

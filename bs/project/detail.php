@@ -56,11 +56,18 @@ include("head.php");
           </div>
           <div class="project-comment-content">
           <p>我真TM帅</p>
+
           </div>
+
         </div>
+
     </div>
 </div>
 </div>
+
 </div>
+<?PHP
+include("../common/footer.html");
+?>
 </body>
 </html>
