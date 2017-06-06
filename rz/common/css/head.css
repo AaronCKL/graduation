@@ -1,0 +1,120 @@
+.search-wrapper{
+	float: left;
+	background-color: #ff4040;
+	padding: 2px;
+	border-radius: 3px;
+	margin-left: 40px;
+	margin-top: 5px;
+	height: 39px;
+}
+.search-wrapper .ipt {
+    width: 607px;
+    height: 35px;
+    text-indent: 16px;
+    font-size: 16px;
+    outline: none;
+    color: rgb(153, 153, 153);
+    border: 0 none;
+}
+.search-wrapper .btn-color{
+    color: #fff;
+    background-color: #ff4040;
+    border-color: #ff4040;
+}
+.search-wrapper button{
+    height: 35px;
+}
+.rz-head-nav{
+	padding: 10px 400px;
+	background-color: #fff;
+}
+.rz-head-nav .rz-nav{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+    font-size: 18px;
+}
+.rz-head-nav .rz-nav:before{
+	content: ' ';
+	display: table;
+}
+.rz-head-nav .rz-nav:after{
+	content: ' ';
+	display: table;
+	clear: both;
+}
+.rz-head-nav .rz-nav>li{
+	float: left;
+	margin-left: 60px;
+}
+.rz-head-nav .rz-nav li a{
+	color: #000;
+}
+.rz-nav>li.active a, .rz-nav>li:hover a {
+    transition: all .2s ease;
+    color: #ff4040;
+}
+.wrap-summary {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+.wrap-summary .container {
+    width: 1000px;
+    min-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.wrap-summary .container:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.wrap-summary .summary {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    background-color: #fff;
+}
+.wrap-summary .summary ul {
+    text-align: center;
+}
+.wrap-summary .summary ul li {
+    padding-left: 25px;
+    padding-right: 25px;
+    display: inline-block;
+}
+.wrap-summary .summary ul li+li {
+    border-left: 1px solid #eee;
+}
+.wrap-summary .summary ul li p {
+    font-size: 16px;
+    color: #666;
+    text-align: center;
+}
+.wrap-summary .summary ul li p>span {
+    font-size: 30px;
+    color: #dd5756;
+}
+.match-nav h1 i {
+    width: 52px;
+    height: 42px;
+    background-position: -34px 8px;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+.icon {
+    display: inline-block;
+    background: url(/rz/img/home2-icon.png);
+    background-repeat: no-repeat;
+}
+.match-nav .more {
+    float: right;
+    font-size: 14px;
+    color: #999;
+    line-height: 46px;
+    margin-right: 23px;
+    font-weight: bold;
+}

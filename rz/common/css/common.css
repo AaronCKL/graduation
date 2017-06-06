@@ -1,0 +1,133 @@
+*, ul, :after, :before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+a, a:focus, a:hover {
+    text-decoration: none;
+}
+.ib-header {
+    padding: 14px 0;
+    background-color: #fff;
+}
+.ib-header--inner {
+    margin: 0 auto;
+    width: 1100px;
+}
+.ib-header .header-logo {
+    background-image: url();
+    background-repeat: no-repeat;
+    background-position: 50%;
+    display: block;
+    width: 161px;
+    height: 50px;
+    float: left;
+}
+.ib-header .ib-nav {
+    float: left;
+    margin-top: 8px;
+    margin-left: 128px;
+    font-size: 16px;
+}
+.ib-header--inner:after, .ib-header--inner:before {
+    content: " ";
+    display: table;
+}
+.ib-nav {
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+}
+.ib-nav:after, .ib-nav:before {
+    content: " ";
+    display: table;
+}
+.ib-nav>li.active a, .ib-nav>li:hover a {
+    transition: all .2s ease;
+    color: #3084e5;
+}
+
+.ib-header .ib-nav a {
+    color: #000;
+    font-weight: 400;
+}
+
+.ib-nav>li a {
+    color: #313131;
+    display: block;
+    padding: 5px 0;
+}
+.ib-nav>li.active, .ib-nav>li:hover {
+    transition: all .2s ease;
+    border-bottom: 3px solid #3084e5;
+}
+
+.ib-header .ib-nav>li+li {
+    margin-left: 52px;
+}
+
+.ib-header .ib-nav li {
+    position: relative;
+}
+
+.ib-nav>li {
+    float: left;
+    border-bottom: 3px solid transparent;
+}
+.ib-nav:after {
+    clear: both;
+}
+.ib-header--inner:after {
+    clear: both;
+}
+.ib-header .login-nav {
+    float: right;
+    margin-top: 8px;
+    color: #999;
+    font-size: 13px;
+    position: relative;
+}
+.ib-header .login-nav>a {
+    line-height: 35px;
+    color: #ff4040;
+    padding: 8px 12px;
+    margin-right: 12px;
+    outline: none;
+}
+.ib-banner{
+    width: 100%;
+    margin: 0 auto;
+    height: 400px;
+}
+.ib-banner .content-wrapper {
+    z-index: 3;
+    color: #fff;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    right:0;bottom:30px;
+    height:100px;
+}
+.ib-banner .content-wrapper label input {
+    width: 607px;
+    height: 42px;
+    border: 1px solid #fff;
+    border-radius: 6px;
+    text-indent: 16px;
+    font-size: 16px;
+    color: #999;
+}
+.ib-banner .content-wrapper label button {
+    position: absolute;
+    box-sizing: border-box;
+    right: 4px;
+    top: 3px;
+    width: 38px;
+    height: 38px;
+    border: none;
+    background-color: hsla(0,0%,100%,0);
+}
+

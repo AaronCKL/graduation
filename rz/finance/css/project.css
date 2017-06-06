@@ -1,0 +1,170 @@
+.project{
+	max-width: 1100px;
+    margin: 0 auto;
+}
+.project:before, .project:after{
+    content: " ";
+    display: table;
+}
+.project:after{
+    clear: both;
+}
+.project-list{
+	width: 900px;
+    padding-right: 27px;
+    float: left;
+    margin-top: 36px;
+}
+.project-item{
+    color: #999;
+    background-color: #fff;
+    border-bottom: 1px dashed #ccc;
+}
+.project-item:before{
+    content: " ";
+    display: table;
+}
+.project-item:after {
+	content: " ";
+    display: table;
+    clear: both;
+}
+.project-item .project-banner{
+    width: 300px;
+    height: 154px;
+    float: left;
+    margin-right: 26px;
+}
+.project-item-meta{
+	float: left;
+    width: 527px;
+}
+.project-title {
+    display: block;
+    font-size: 18px;
+    color: #3b4a82;;
+    margin: 20px 0;
+    overflow:hidden;
+}
+.fix-1{
+    position:fixed;
+    left:1050px;
+    top:200px;
+}
+.fix-2{
+    position:fixed;
+    left:1050px;
+    top:350px;
+}
+.project-news-list {
+	background-color: #fff;
+	width: 900px;
+    padding: 0 30px;
+    float: left;
+    margin-top: 36px;
+}
+.project-news-list:before {
+    display: table;
+    content: ' ';
+}
+.project-news-list:after {
+    display: table;
+    content: ' ';
+    clear: both;
+}
+.project-news-title{
+	font-size: 30px;
+	margin: 20px 0;
+	color: #3b4a82;
+}
+.project-news{
+	font-size: 20px;
+    padding-bottom: 20px;
+}
+.project-time{
+    font-size: 15px;
+    color: #999;
+    padding-bottom: 10px;
+}
+.project-comment-wrapper {
+    background-color: #fff;
+    width: 900px;
+    padding: 20px 60px;
+    float: left;
+    margin-top: 36px;
+}
+
+.project-comment:before ,.project-comment-list:before{
+    display: table;
+    content: ' ';
+}
+.project-comment:after ,.project-comment-list:after{
+    display: table;
+    content: ' ';
+    clear: both;
+}
+.project-comment button{
+    float: right;
+    margin-top: 10px;
+}
+.project-comment-list{
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.09);
+}
+.member-img{
+    float: left;
+}
+.member-img img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.project-comment-right{
+    padding-left: 47px;
+    float: left;
+}
+.project-comment-member{
+    color: #999;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+.project-comment-member strong{
+    color: #e94e38;
+    margin-right: 20px;
+}
+.finance-money{
+    font-size: 18px;
+    color: #e93100;
+    vertical-align: baseline; 
+}
+.btn-money{
+    color: #fff;
+    background-color: #e93100;
+    border-color: #e93100;
+    float: right;
+}
+.p-fix{
+    margin-top: 20px;
+}
+.project-common-list{
+    background-color: #fff;
+    width: 900px;
+    float: left;
+    margin-top: 36px;
+}
+.m-title {
+    height: 56px;
+    line-height: 56px;
+    border-bottom: 1px solid #ddd;
+}
+.m-title .title-span {
+    border-bottom: 2px solid #e94e38;
+    display: inline-block;
+    height: 56px;
+    font-size: 16px;
+    padding: 0 30px;
+    color: #0032b2;
+}
+.m-content{
+    padding: 30px;
+}

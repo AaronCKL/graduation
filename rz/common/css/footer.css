@@ -1,0 +1,118 @@
+.help {
+    padding: 30px 0;
+    color: #ccc;
+    background-color: #484b54;
+    min-width: 1000px;
+}
+.help .container {
+    width: 1000px;
+    min-width: 1000px;
+    margin: 0;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.help .container:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.help-service {
+    float: left;
+    width: 210px;
+}
+.help-service-logo {
+    overflow: hidden;
+    margin-bottom: 5px;
+    width: 108px;
+    height: 40px;
+    background-position: left top;
+    text-indent: -999em;
+}
+.help-service-text {
+    line-height: 22px;
+}
+.help-service-call {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: bold;
+    font-family: arial;
+}
+.help-group {
+    float: left;
+    width: 156px;
+}
+.help-title, .help-title a {
+    color: #eee;
+    font-weight: bold;
+    font-size: 14px;
+}
+.help-item {
+    height: 22px;
+    line-height: 22px;
+    white-space: nowrap;
+}
+.help a {
+    color: #ccc;
+}
+.help-item-wechat {
+    padding-top: 5px;
+}
+.help-item-wechat span {
+    display: block;
+}
+.copyright {
+    padding: 15px 0;
+    color: #eee;
+    background-color: #3b3d45;
+    min-width: 1000px;
+}
+.copyright .container {
+    width: 1000px;
+    min-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.copyright-info {
+    text-align: center;
+}
+.copyright a {
+    color: #eee;
+}
+.copyright p{
+    margin: 0;
+}
+.copyright img{
+    vertical-align: top;
+}
+.certificate {
+    padding-top: 5px;
+    text-align: center;
+}
+.certificate .mod-b {
+    width: 22px;
+    background-position: -48px -45px;
+    background-image: url(/rz/img/home-sprite.png);
+    background-repeat: no-repeat;
+}
+.certificate .mod {
+    height: 26px;
+    display: inline-block;
+    margin-right: 5px;
+}
+.certificate .mod-c {
+    width: 73px;
+    background-position: 0 -76px;
+    background-image: url(/rz/img/home-sprite.png);
+    background-repeat: no-repeat;
+}
+.certificate .mod-d {
+    width: 74px;
+    background-position: 0 -108px;
+    background-image: url(/rz/img/home-sprite.png);
+    background-repeat: no-repeat;
+}
