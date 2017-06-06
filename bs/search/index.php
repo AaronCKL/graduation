@@ -5,7 +5,7 @@ include("head.php");
 <html>
 <body>
 <div class="fix-1">
-<a href="#"><img src="image/mon1.jpg"></a>
+<a href="../project/index.php"><img src="image/mon1.jpg"></a>
 </div>
 <div class="fix-2">
 <a <?php 
@@ -27,15 +27,27 @@ include("head.php");
         $con = mysql_connect($mysql_host,$mysql_user,$mysql_pass) or die('Could not connect: ' . mysql_error());;
    mysql_query("set names ".$mysql_db_language);
    mysql_select_db($mysql_dbname, $con);
-    $chec = mysql_query("select * from project where visible = 1"); 
+   $searchword = $_GET["keyword"];
+    $chec = mysql_query("select * from news where title like '%$searchword%' "); 
    while($re = mysql_fetch_array($chec))
    {  
      echo '<li class="project-item">
-	<img class="project-banner" src="/bs/img/project/'.$re['imgPath'].'">
+	<img class="project-banner" src="/bs/img/news/'.$re['imgPath'].'">
 	<div class="project-item-meta">
-	  <a class="project-title" href="detail.php?projectId='.$re['ID'].'">'.$re['title'].'</a>
+	  <a class="project-title" href="../news/detail.php?newsId='.$re['ID'].'">'.$re['title'].'</a>
 	  <p>'.$re['time'].'</p>
 	</div>
+</li>';
+  } 
+  $chec = mysql_query("select * from project where title like '%$searchword%' "); 
+   while($re = mysql_fetch_array($chec))
+   {  
+     echo '<li class="project-item">
+  <img class="project-banner" src="/bs/img/project/'.$re['imgPath'].'">
+  <div class="project-item-meta">
+    <a class="project-title" href="../project/detail.php?projectId='.$re['ID'].'">'.$re['title'].'</a>
+    <p>'.$re['time'].'</p>
+  </div>
 </li>';
   } 
   mysql_close($con);

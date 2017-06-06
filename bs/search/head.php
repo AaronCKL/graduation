@@ -9,21 +9,9 @@ Session_Start();
 <link rel="stylesheet" href="/bs/common/css/common.css">
 <link rel="stylesheet" href="/bs/common/css/test.css">
 <link rel="stylesheet" href="/bs/common/css/login.css">
+<link rel="stylesheet" href="/bs/project/css/project.css">
 <script type="text/javascript" src="/bs/common/js/jquery-1.11.2.min.js"></script>
-<script type="text/javascript" src="/bs/common/js/Tony_Tab.js"></script>
 <script type="text/javascript" src="/bs/bootstrap/js/bootstrap.min.js"></script>
-<style type="text/css">
-.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
-.clearfix{zoom:1;}
-ul, li{list-style:none;}/*去掉无序列表前面的原点*/
-img{border:0;}
-.focus{height:400px;overflow:hidden;position:relative;}
-.focus ul{height:400px;position:absolute;padding: 0;margin: 0;}
-.focus ul li{float:left;height:400px;overflow:hidden;position:relative;background:#000;}
-.focus .preNext{width:45px;height:100px;position:absolute;top:150px;background:url(img/sprite.png) no-repeat 0 0;cursor:pointer;display:none;}
-.focus .pre{left:0;}
-.focus .next{right:0;background-position:right top;}
-</style>
 </head>
 <body>
 <div class="wrapper">
@@ -31,7 +19,7 @@ img{border:0;}
 	<div class="ib-header--inner">
 		<a class="header-logo" href=""><img src="/bs/common/img/9.png" width="120px" height="60px"></a>
 		<ul class="ib-nav">
-		   <li class="active"><a href="/bs/index.php">首页</a></li>
+		   <li class=""><a href="/bs/index.php">首页</a></li>
 		   <li class=""><a href="/bs/project/index.php" >项目汇集</a></li>
 		   <li class=""><a href="/bs/news/index.php">财经要闻</a></li>
 		   <li class="dropdown">
@@ -56,7 +44,7 @@ img{border:0;}
               echo '<a href="" data-toggle="modal" data-target="#register-modal">注册</a>
                 <a href="" data-toggle="modal" data-target="#login-modal">登录</a>';
         }
-    ?>
+        ?>
 		</div>
 	</div>
 </div>

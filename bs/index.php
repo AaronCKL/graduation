@@ -15,10 +15,10 @@ include("common/head.php");
 			<li><a href="JavaScript:;"><img src="img/5.jpg" style=" height:400px ;"/></a></li>
 		</ul>
 		<div class="content-wrapper">
-		<form>
+		<form action="search/index.php" method="get">
 			<label style="position: relative;">
-				<input type="text" name="keyword" placeholder="热门城市">
-				<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-search" style="color: #3084e5;font-size: 25px;"></span></button>
+				<input type="text" name="keyword" placeholder="项目·新闻">
+				<button class="btn btn-default"><span class="glyphicon glyphicon-search" style="color: #3084e5;font-size: 25px;"></span></button>
 			</label>
 		</form>
 		</div>

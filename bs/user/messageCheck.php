@@ -6,7 +6,7 @@
   $name=$_SESSION['name'];
   require("../config/mysql.php");
         $con = mysql_connect($mysql_host,$mysql_user,$mysql_pass) or die('Could not connect: ' . mysql_error());;
-   mysql_query($mysql_db_language);
+   mysql_query("set names ".$mysql_db_language);
    mysql_select_db($mysql_dbname, $con);
    date_default_timezone_set("Asia/Shanghai");
    $mytime=date("Y.m.d")."&nbsp;"."&nbsp;".date("h:i:sa");

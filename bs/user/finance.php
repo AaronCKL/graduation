@@ -47,7 +47,7 @@ include("head.php");
     <label for="content" class="col-sm-2 control-label">项目内容</label>
     <div class="col-sm-10">
     <div id='txtDiv' style='border:1px solid #cccccc; height:300px;'>
-        我真帅
+      
     </div>
     </div>
   </div>
